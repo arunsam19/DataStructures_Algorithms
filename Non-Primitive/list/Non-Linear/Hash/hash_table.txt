@@ -1,0 +1,14 @@
+Load factor: data stored / total available slots
+
+Collision:
+Open addressing: ->
+    Linear probing mode
+    Plus 3 rehash algorithm
+    Quadratic probing mode
+    Double rehash algorithm
+Closed addressing:
+
+
+
+
+

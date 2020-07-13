@@ -1,0 +1,10 @@
+Binary tree,
+Binery search tree.
+
+Search:
+Pre-order traversal
+    root-left-right
+Post-order traversal (Bottom-up)
+    left-right-root
+In-order traversal
+    left-root-right
