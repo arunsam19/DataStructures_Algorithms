@@ -8,13 +8,13 @@ def binary_search(myli, value):
         else:
             print('The value is not found in the list')
     while len(myli) > 2:
-        middleIndex = int(len(myli)/2)
+        middleIndex = len(myli)//2
         if myli[middleIndex] == value:
             return middleIndex
         elif value < myli[middleIndex]:
-            return binary_search(myli[:(middleIndex-1)], value)
+            return binary_search(myli[:middleIndex], value)
         elif value > myli[middleIndex]:
-            return middleIndex + binary_search(myli[middleIndex+1:], value) + 1
+            return middleIndex + binary_search(myli[middleIndex:], value) + 1
 
 
 def binary_search_new(mylist, left, right, value):
@@ -30,9 +30,9 @@ def binary_search_new(mylist, left, right, value):
         print('The value is not found at in the list')
 
 #driver code
-mylist = [1,4,5,8,10,11,19,20,25,27,29,31,34,36,38]
+mylist = [1,4,5,8,10,11,19,20]
 mylist = [1,4,5,8,10,11]
-value = 115
+value = 11
 
 if __name__ == "__main__":
     #foundIndex = binary_search(mylist, value)
@@ -41,4 +41,4 @@ if __name__ == "__main__":
     foundIndex = None
     foundIndex = binary_search_new(mylist, 0, len(mylist)-1, value)
     if foundIndex != None:
-        print('The value is found at index: {}'.format(foundIndex))
+        print('The value {} is found at index: {}'.format(value, foundIndex))
